@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Payments</title>
+</head>
+<style>
+.body {
+    font-family: Arial, sans-serif;
+    background-color:palegreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+.table-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+th {
+    background-color: #f4f4f4;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+.status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 12px;
+}
+.pending {
+    background-color: #f39c12;
+    
+}
+.failed {
+    background-color: #e74c3c;
+}
+.done {
+    background-color: #2ecc71;
+    color: green;
+}
+.search-bar {
+    width: 100% 30px;
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+.filter-button {
+    background-color: #0080ff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.filter-button:hover {
+    background-color: #d4dde2;
+}
+.employee-info {
+    display: flex;
+    align-items: center;
+}
+.employee-info img {
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.checkbox{ 
+align-items: flex-start;
+}
+</style>
+<body>
+    <div class="table-container">
+        <input type="text" class="search-bar" placeholder="Search for employees, salary amounts..">
+        <button class="filter-button">Filters</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>Employee</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Payment date</th>
+                    <th>Payment Status</th>
+                    <th>Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="VP">
+                        Victor Pacheco
+                    </td>
+                    <td>Sales</td>
+                    <td>$4,000.00</td>
+                    <td>Yesterday</td>
+                    <td><span class="status pending">PENDING</span></td>
+                    <td>Capture payment details</td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="CS">
+                        Charlotte Spencer
+                    </td>
+                    <td>Support</td>
+                    <td>$95,000.00</td>
+                    <td>In 2 days</td>
+                    <td><span class="status pending">PENDING</span></td>
+                    <td>No remarks</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="AB">
+                        Annette Black
+                    </td>
+                    <td>Design</td>
+                    <td>$95,000.00</td>
+                    <td>22/02/2021</td>
+                    <td><span class="status failed">FAILED</span></td>
+                    <td>Please forward this information to...</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="JB">
+                        Jerome Bell
+                    </td>
+                    <td>Sales</td>
+                    <td>$85,000.00</td>
+                    <td>22/02/2021</td>
+                    <td><span class="status done">DONE</span></td>
+                    <td>Request confirmation.</td>
+                    
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="JW">
+                        Jenny Wilson
+                    </td>
+                    <td>Sales</td>
+                    <td>$34,000.00</td>
+                    <td>22/02/2021</td>
+                    <td><span class="status done">DONE</span></td>
+                    <td>No remarks</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="AF">
+                        Albert Flores
+                    </td>
+                    <td>Sales</td>
+                    <td>$30,000.00</td>
+                    <td>22/02/2021</td>
+                    <td><span class="status done">DONE</span></td>
+                    <td>Received confirmation</td>
+              
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td class="employee-info">
+                        <img src="https://via.placeholder.com/30" alt="AM">
+                        Arlene McCoy
+                    </td>
+                    <td>Sales</td>
+                    <td>$95,000.00</td>
+                    <td>22/02/2021</td>
+                    <td><span class="status done">DONE</span></td>
+                    <td>Submitted a report</td>
+                 
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
